@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import './App.css';
+import './SkyTracker.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import Header from './components/Header/NavBar';
 import List from './components/List/List';
 import { fetchFlights } from './data/service';
 
-class App extends Component {
+class SkyTracker extends Component {
   state = {
     results: [],
     loading: false,
@@ -53,4 +53,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default SkyTracker;
