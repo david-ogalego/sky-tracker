@@ -61,7 +61,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "prod": "cross-env NODE_ENV=production node scripts/server.js",
-    "postinstall": "webpack --config ./config/webpack.config.prod.js -p --progress --colors",
+    "postinstall": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js -p --progress --colors",
     "test": "node scripts/test.js --env=jsdom",
     "coverage": "node scripts/test.js --env=jsdom --coverage",
     "coverage-watch": "node scripts/test.js --env=jsdom --coverage --watch"
