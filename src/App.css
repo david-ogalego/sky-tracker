@@ -1,0 +1,80 @@
+.skytracker-logo {
+	background-image: url('./images/paper.png');
+	background-position: right;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+.search-bar {
+	width: 30%;
+	float: left;
+	margin-left: 5%;
+}
+
+.form-control.input-skytracker {
+	width: 100%;
+}
+
+.skytracker-list {
+	width: 60%;
+	float: left;
+	padding-left: 40px;
+}
+
+.skytracker-time {
+	margin-left: 9%;
+}
+
+.DayPickerInput {
+	display: block !important;
+}
+
+.loading {
+    position: absolute;
+	left: 65%;
+	top: 50%;
+	z-index: 1;
+	width: 150px;
+	height: 150px;
+	margin: -75px 0 0 -75px;
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
