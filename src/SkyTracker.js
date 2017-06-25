@@ -11,6 +11,9 @@ class SkyTracker extends Component {
     results: [],
     loading: false,
   }
+  clearResults = () => {
+    this.setState({ loading: false, results: [] });
+  }
   searchResults = (fromWhere, toWhere, fromDate, toDate, returnFromDate, returnToDate) => {
     this.setState({ loading: true });
     return fetchFlights(
@@ -45,7 +48,7 @@ class SkyTracker extends Component {
       <div className="">
         <Header />
         <div className="skytracker-logo">
-          <SearchBar className="SearchBar" searchResults={this.searchResults} />
+          <SearchBar className="SearchBar" searchResults={this.searchResults} clearResults={this.clearResults} />
           <List listItems={this.state.results} isLoading={this.state.loading} />
         </div>
       </div>

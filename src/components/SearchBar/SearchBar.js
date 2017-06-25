@@ -54,15 +54,17 @@ class SearchBar extends Component {
           newState.dayReturnFrom,
           newState.dayReturnTo,
         );
+    } else {
+      this.props.clearResults();
     }
   }
   render() {
     return (
       <div className="form-horizontal search-bar">
-        <AutoComplete className="form-group " id="FROM" placeholder={'From where'} onChange={this.onChange} onSelect={this.onSelectFrom} />
-        <AutoComplete className="form-group " id="TO" placeholder={'To where'} onChange={this.onChange} onSelect={this.onSelectTo} />
-        <DatePicker className="form-group " literal={'From'} placeholder={'Salida'} dayChange={this.dayChangeFrom} />
-        <DatePicker className="form-group " literal={'To'} placeholder={'Retorno'} dayChange={this.dayChangeReturnTo} />
+        <AutoComplete className="form-group " id="FROM" placeholder={'Where are you traveling from?'} onChange={this.onChange} onSelect={this.onSelectFrom} />
+        <AutoComplete className="form-group " id="TO" placeholder={'Where are you travelling to?'} onChange={this.onChange} onSelect={this.onSelectTo} />
+        <DatePicker className="form-group " literal={'From'} placeholder={'When do you want to take off?'} dayChange={this.dayChangeFrom} />
+        <DatePicker className="form-group " literal={'To'} placeholder={'When do you want to go back?'} dayChange={this.dayChangeReturnTo} />
       </div>
     );
   }
@@ -70,10 +72,12 @@ class SearchBar extends Component {
 
 SearchBar.defaultProps = {
   searchResults: () => { },
+  clearResults: () => { },
 };
 
 SearchBar.propTypes = {
   searchResults: PropTypes.func,
+  clearResults: PropTypes.func,
 };
 
 export default SearchBar;
