@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "eslint-config-airbnb": "^15.0.1",
+    "express": "^4.15.3",
     "moment": "^2.18.1",
     "prop-types": "15.5.10",
     "react": "^15.6.1",
@@ -23,6 +24,7 @@
     "babel-runtime": "6.23.0",
     "case-sensitive-paths-webpack-plugin": "1.1.4",
     "chalk": "1.1.3",
+    "cross-env": "^5.0.1",
     "css-loader": "0.28.1",
     "dotenv": "4.0.0",
     "enzyme": "^2.8.1",
@@ -58,6 +60,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "prod": "cross-env NODE_ENV=production node scripts/server.js",
+    "postinstall": "webpack --config ./config/webpack.config.prod.js -p --progress --colors",
     "test": "node scripts/test.js --env=jsdom",
     "coverage": "node scripts/test.js --env=jsdom --coverage",
     "coverage-watch": "node scripts/test.js --env=jsdom --coverage --watch"
