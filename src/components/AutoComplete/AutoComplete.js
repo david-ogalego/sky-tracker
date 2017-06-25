@@ -11,9 +11,7 @@ class AutocompleteSky extends Component {
     this.setState({
       value,
     });
-    if (this.props.onSelect) {
-      this.props.onSelect(item);
-    }
+    this.selectItem(item);
   }
   onChange = (event, value) => {
     this.setState({
@@ -25,6 +23,14 @@ class AutocompleteSky extends Component {
           items,
         });
       });
+    }
+    if (value === '') {
+      this.selectItem({});
+    }
+  }
+  selectItem = (item) => {
+    if (this.props.onSelect) {
+      this.props.onSelect(item);
     }
   }
   render() {
