@@ -1,1 +1,1 @@
-web: node scripts/server.js NODE_ENV=production
+web: cross-env NODE_ENV=production node scripts/server.js
